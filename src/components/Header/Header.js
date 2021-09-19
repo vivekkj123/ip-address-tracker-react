@@ -7,7 +7,8 @@ function Header() {
         <div className="Header">
             <h2>IP Address Tracker</h2>
             <div className="inputBox">
-                <input type="text" placeholder='Search for any IP address or domain'/>
+                
+                <input type="url" placeholder='Search for any IP address or domain'/>
                 <button>
         <img src={arrowIcon} alt="" />
                 </button>
