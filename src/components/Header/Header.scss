@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+$VeryDarkGray: hsl(0, 0%, 17%);
+.Header {
+  background: url(./pattern-bg.png);
+  height: 250px;
+  width: 100%;
+
+  h2 {
+    color: white;
+    text-align: center;
+    padding: 30px;
+  }
+  .inputBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    input {
+      color: $VeryDarkGray;
+      height: 30px;
+      width: 500px;
+      border-radius: 20px 0 0 20px;
+      padding: 20px;
+      font-size: 18px;
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      outline: none;
+      border-color: transparent;
+    }
+    input:focus{
+        outline: none;
+    }
+    button {
+      display: inline-block;
+      border: none;
+      background: black;
+      border-radius: 0 20px 20px 0;
+      width: 60px;
+      position: relative;
+    }
+  }
+}
