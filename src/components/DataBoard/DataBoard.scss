@@ -2,10 +2,14 @@ $DarkGray: hsl(0, 0%, 59%);
 $VeryDarkGray: hsl(0, 0%, 17%);
 
 .DataBoard {
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 480px) {
     display: block;
     text-align: center;
     width: 75%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    top: -50px;
   }
   z-index: 2;
   background-color: white;
@@ -20,33 +24,32 @@ $VeryDarkGray: hsl(0, 0%, 17%);
   padding: 10px;
   div:nth-child(2) {
     border-left: 1px solid $DarkGray;
-    
+
     padding-left: 25px;
-    @media (max-width: 375px) {
+    @media only screen and (max-width: 480px) {
       border-left: none;
     }
   }
   div:nth-child(3) {
     border-left: 1px solid $DarkGray;
-    
+
     padding-left: 25px;
-    
-    @media (max-width: 375px) {
+
+    @media only screen and (max-width: 480px) {
       border-left: none;
     }
   }
   div:nth-child(4) {
     border-left: 1px solid $DarkGray;
-    
+
     padding-left: 25px;
-    
-    @media (max-width: 375px) {
+
+    @media only screen and (max-width: 480px) {
       border-left: none;
     }
   }
   div {
-    @media (max-width: 375px) {
-   
+    @media only screen and (max-width: 480px) {
       margin: 10px;
     }
     margin: 15px 30px 30px 15px;
