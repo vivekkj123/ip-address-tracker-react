@@ -4,14 +4,22 @@ import arrowIcon from "./icon-arrow.svg";
 import DataBoard from "../DataBoard/DataBoard";
 import { useStateValue } from "../../StateProvider";
 import axios from "../../Axios";
+import validator from "validator";
+
 function Header() {
   /* eslint-disable no-unused-vars */
   const [{ data }, dispatch] = useStateValue();
   const [Ipaddr, setIpaddr] = useState("");
   const handleClick = async () => {
-    let res =
-      await axios.get(`api/v1?apiKey=${process.env.REACT_APP_IPIFY_APIKEY}&ipAddress=${Ipaddr}
+    if (validator.isIP(Ipaddr)) {
+      let res =
+        axios.get(`api/v1?apiKey=${process.env.REACT_APP_IPIFY_APIKEY}&ipAddress=${Ipaddr}
     `);
+    }
+    let res = await axios.get(
+      `api/v1?apiKey=${process.env.REACT_APP_IPIFY_APIKEY}&domain=${Ipaddr}`
+    );
+
     dispatch({ type: "SET_DATA", data: res });
   };
   return (
