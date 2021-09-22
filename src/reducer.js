@@ -1,30 +1,33 @@
 export const initialState = {
+  data: {
     data: {
-        data: {
-            ip: '192.212.174.101',
-            location: {
-                city: 'Brooklyn',
-                country: 'NY',
-                postalCode: '10001',
-                timezone: '-05:00'
-            },
-            isp: 'SpaceX Starlink'
-        }
-    }
+      ip: "192.212.174.101",
+      location: {
+        city: "Brooklyn",
+        country: "NY",
+        postalCode: "10001",
+        timezone: "-05:00",
+        lat: 43.7384,
+        lng: 7.4246
+      },
+      isp: "SpaceX Starlink",
+    },
+  },
 };
 
-export const getBasketTotal = (basket) => basket ?. reduce((amount, item) => (item.price) + amount, 0);
+export const getBasketTotal = (basket) =>
+  basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-    switch (action.type) {
-        case "SET_DATA":
-            return({
-                ...state,
-                data: action.data
-            })
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case "SET_DATA":
+      return {
+        ...state,
+        data: action.data,
+      };
+    default:
+      return state;
+  }
 };
 
 export default reducer;

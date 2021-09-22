@@ -3,13 +3,9 @@ import "./DataBoard.scss";
 import { useStateValue } from "../../StateProvider";
 
 function DataBoard() {
+  /* eslint-disable no-unused-vars */
   const [{ data }, dispatch] = useStateValue();
-  if (data.length==0){
-    data.data = {
-      
-    }
-  }
-  console.log(data);
+console.log(data);
   return (
     <div className="DataBoard">
       <div className="ipAddress">
